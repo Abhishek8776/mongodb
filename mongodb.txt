@@ -1,0 +1,21 @@
+use dbname;                                                               - Create or use db
+db.dropDatabase();                                                        - Delete Database
+show collections;                                                         - List all collections in the db
+db.createCollection("collectionName");                                    - Create Collection
+db.collectionName.find();                                                 - Find all documents in a collection
+db.collectionName.find({ key: value });			                  - Find documents matching a specific condition
+db.collectionName.find({ key: { $exists: true } });                       - Find documents where a field exists
+db.collectionName.find({ key: { $in: [value1, value2    ] } });          - Find documents where a field matches any value in an array
+db.collectionName.find({ key: /pattern/ });                               - Find documents where a field matches a regular expression
+db.collectionName.findOne();                                              - Find one document and return it
+db.collectionName.countDocuments({ key: value });                         - Count the number of documents matching a condition
+db.collectionName.find().sort({ key: 1 });                                - Ascending order
+db.collectionName.find().sort({ key: -1 });                               - Descending order
+db.collectionName.find().limit(number);                                   - Limits number of documents returned
+db.collectionName.find().skip(number);                                    - Skip specified number of documents
+db.collectionName.updateOne({ criteria }, { $set: { key: newValue } });   - Update a single document
+db.collectionName.updateMany({ criteria }, { $set: { key: newValue } });  - Update multiple documents
+db.collectionname.drop();                                                 - Delete collection
+db.collectionName.deleteOne({ criteria });                                - Remove a single document
+db.collectionName.deleteMany({ criteria });                               - Remove multiple documents
+replication,REPLICaset,sharding
